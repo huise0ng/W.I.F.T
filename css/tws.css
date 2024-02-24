@@ -1,0 +1,53 @@
+ul {
+  list-style: none; /*리스트 점 생기는거 방지*/
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+:after, :before {
+  box-sizing: border-box; /*content영역과 테두리영역을 합쳐서 설정한 width나 height가 되게하는 것 */
+}
+:root {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  cursor: default;
+  line-height: 1.15;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  tab-size: 4;
+}
+html,body {
+  height: 100%;
+}
+img,picture,video,canvas,svg {
+  display: block;
+  max-width: 100%;
+}
+button {
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+li,a {
+  text-decoration: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.image-container {
+  width: 100%;
+  /* max-width: 600px; */
+  overflow-y: auto;
+}
+
+/* 이미지에 대한 스타일 */
+.image-container img {
+  width: 100%;
+}
