@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박강원</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="images/파비콘.svg" type="image/x-icon">
+</head>
+
+<body>
+    <div class="header">
+        <span class="name">Park Kang Won</span>
+        <div class="move-tap">
+            <!-- <span>Main</span> -->
+            <span id="about-me">About Me</span>
+            <span id="works">Works</span>
+        </div>
+    </div>
+    <div class="container">
+        <img src="images/메인수정.svg" alt="Main Image">
+        <img src="images/푸터최종수정2.svg">
+    </div>
+    <div class="letter">
+        <img src="images/편지.svg">
+    </div>
+    <div class="message">
+        <img src="images/메시지수정.svg">
+    </div>
+    <div class="modal-bg"></div>
+
+    <script>
+        document.querySelector('.letter').addEventListener('click', function () {
+            document.querySelector('.message').classList.add('show');
+            document.querySelector('.modal-bg').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+
+        document.querySelector('.modal-bg').addEventListener('click', function () {
+            document.querySelector('.message').classList.remove('show');
+            document.querySelector('.modal-bg').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+
+        document.querySelector('.name').addEventListener('click', function (event) {
+            location.href = 'main.html';
+        });
+
+        document.querySelector('#works').addEventListener('click', function (event) {
+            location.href = 'works.html';
+        });
+
+        // document.querySelector('#about-me').addEventListener('click', function (event) {
+        //     location.href = '';
+        // });
+
+    </script>
+</body>
+
+</html>

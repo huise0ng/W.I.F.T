@@ -8,7 +8,8 @@ ul {
 }
 
 *,
-:after, :before {
+:after,
+:before {
   box-sizing: border-box; /*content영역과 테두리영역을 합쳐서 설정한 width나 height가 되게하는 것 */
 }
 :root {
@@ -21,10 +22,15 @@ ul {
   word-break: break-word;
   tab-size: 4;
 }
-html,body {
+html,
+body {
   height: 100%;
 }
-img,picture,video,canvas,svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
@@ -33,7 +39,8 @@ button {
   border: 0;
   cursor: pointer;
 }
-li,a {
+li,
+a {
   text-decoration: none;
 }
 table {
@@ -41,13 +48,33 @@ table {
   border-spacing: 0;
 }
 
-.image-container {
-  width: 100%;
-  /* max-width: 600px; */
-  overflow-y: auto;
+body {
+  background-color: #B6E2FF;
 }
 
-/* 이미지에 대한 스타일 */
-.image-container img {
-  width: 100%;
+
+
+.title {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Rubik Scribble";
+  font-size: 130px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20%;
 }
+
+.sub-title {
+  color: #fff;
+  text-align: center;
+  font-family: "87MM ILSANG";
+  font-size: 24px;
+  font-style: oblique;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+}
+
+
