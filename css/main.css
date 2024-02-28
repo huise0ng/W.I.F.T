@@ -62,14 +62,21 @@ table {
 }
 
 .container {
-  width: 100%;
-  /* max-width: 600px; */
-  overflow-y: auto;
+  height: auto;
+  min-height: 100%;
+  padding-bottom: 183px;
 }
 
-/* 이미지에 대한 스타일 */
-.container img {
+.container img,
+.footer img {
   width: 100%;
+}
+
+footer {
+  /* height: 183px; */
+  position: relative;
+  top: 0px;
+  transform: translateY(-100%);
 }
 
 .name {
@@ -79,82 +86,35 @@ table {
   cursor: pointer;
 }
 .name:hover {
-  text-shadow: 2px 3px 10px #B6E2FF;
+  text-shadow: 2px 3px 10px #b6e2ff;
 }
 
 .move-tap {
   float: right;
-  padding-right:128px;
+  padding-right: 128px;
   color: #f5f4f4;
   cursor: pointer;
 }
-.move-tap span:hover{
-  color:white;
+.move-tap span:hover {
+  color: white;
 }
-
 
 .move-tap span {
-  margin-right: 40px; /* 각 요소 사이의 간격 */
+  margin-right: 40px;
 }
 
-.move-tap span:last-child{
+.move-tap span:last-child {
   margin-right: 0;
-}
-
-@media (max-width:1023px){
-  .header {
-    font-size: 22px; /* 작은 화면에서 글꼴 크기 조정 */
-    padding-top: 32px;
-  }
-
-  .name {
-    padding-left: 64px; /* 작은 화면에서 여백 조정 */
-  }
-
-  .move-tap {
-    padding-right: 64px; /* 작은 화면에서 여백 조정 */
-  }
-}
-
-@media (max-width: 767px) {
-  .header {
-    font-size: 20px; /* 작은 화면에서 글꼴 크기 조정 */
-    padding-top: 24px;
-  }
-
-  .name {
-    padding-left: 56px; /* 작은 화면에서 여백 조정 */
-  }
-
-  .move-tap {
-    padding-right: 56px; /* 작은 화면에서 여백 조정 */
-  }
-}
-
-
-@media (max-width: 480px){
-  .header {
-    font-size: 14px; /* 작은 화면에서 글꼴 크기 조정 */
-    padding-top: 16px;
-  }
-
-  .name {
-    padding-left: 48px; /* 작은 화면에서 여백 조정 */
-  }
-
-  .move-tap {
-    padding-right: 48px; /* 작은 화면에서 여백 조정 */
-  }
 }
 
 .letter {
   /* position: fixed; */
   width: 56px;
-  height: 56px;
-  transition: transform 2s ease; /* 부드러운 전환 효과 */
+  height: auto;
+  transition: transform 2s ease;
   position: fixed;
-  right: 32px; /* 오른쪽 뷰포트 경계로부터 20px 떨어진 위치에 배치 */
-  bottom: 32px; 
+  right: 32px;
+  bottom: 32px;
 }
 
 .letter:hover {
@@ -170,7 +130,7 @@ table {
   }
 }
 
-.message{
+.message {
   width: 500px;
   height: auto;
   display: none;
@@ -181,32 +141,189 @@ table {
   z-index: 100;
 }
 
-
-.modal-bg{
-  display: none; /* 초기 상태는 숨김 */
+.modal-bg {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.68); /* 20% 투명도의 검은색 */
-  z-index: 90; /* .message 뒤에 위치 */
+  background: rgba(255, 255, 255, 0.68);
+  z-index: 90;
 }
 
-.show{
+.show {
   display: block;
 }
 
-/* .footer{
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-} */
-
-.introduce-page{
-  background-color: #fff;
+.introduce-page {
+  background-color: #1ba8ff;
   width: 100vw;
-  height: 100vh;
+  height: 1080px;
   color: black;
+  padding: 1px;
+}
+
+.left-contents {
+  margin-top: 160px;
+  margin-left: 240px;
+  float: left;
+}
+
+.left-bottom {
+  margin-top: 12px;
+}
+
+.profile-image {
+  width: 402px;
+  height: 530px;
+}
+
+.move-to-notion-btn {
+  color: #fff;
+  font-family: "87MM ILSANG";
+  font-size: 16px;
+  font-style: oblique;
+  border: 2px solid #fff;
+  padding: 20px 146px;
+}
+
+.right-contents {
+  color: white;
+  margin-top: 160px;
+  margin-left: 80px;
+  float: left;
+  font-family: Wanted Sans;
+
+}
+
+.flex-conlomn {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.eng-name {
+  font-family: "87MM ILSANG";
+  font-size: 16px;
+  font-style: oblique;
+  margin-bottom: 4px;
+}
+
+.kor-name {
+  font-family: Wanted Sans;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.introduce {
+  margin-top: 24px;
+  width: 400px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 0.6px;
+}
+
+.line {
+  margin-top: 24px;
+  border: 1px solid #fff;
+}
+
+.details{
+  margin-top: 24px;
+  font-size: 16px;
+  margin-bottom: 24px;
+  
+}
+
+
+.detail-flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    font-size: 22px;
+    padding-top: 32px;
+  }
+
+  .name {
+    padding-left: 64px;
+  }
+
+  .move-tap {
+    padding-right: 64px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .header {
+    font-size: 20px;
+    padding-top: 24px;
+  }
+
+  .name {
+    padding-left: 56px;
+  }
+
+  .move-tap {
+    padding-right: 56px;
+  }
+
+  .message {
+    width: 400px;
+  }
+
+  .letter {
+    width: 52px;
+  }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+  .header {
+    font-size: 14px;
+    padding-top: 16px;
+  }
+
+  .name {
+    padding-left: 48px;
+  }
+
+  .move-tap {
+    padding-right: 48px;
+  }
+
+  .message {
+    width: 300px;
+  }
+
+  .letter {
+    width: 48px;
+  }
+}
+
+@media all and (max-width: 479px) {
+  .header {
+    font-size: 12px;
+    padding-top: 14px;
+  }
+
+  .name {
+    padding-left: 40px;
+  }
+
+  .move-tap {
+    padding-right: 40px;
+  }
+
+  .message {
+    width: 200px;
+  }
+
+  .letter {
+    width: 44px;
+  }
 }
