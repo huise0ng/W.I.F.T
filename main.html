@@ -22,17 +22,8 @@
         <img src="images/메인수정.svg" alt="Main Image">
         <div class="introduce-page" id="introduce">
             <div class="left-contents">
-                <div class="profile-image">
-                    <img src="images/시현하다.jpeg">
-                </div>
-                <div class="left-bottom">
-                    <button type="button" class="move-to-notion-btn">자세히 알아보기</button>
-                </div>
-            </div>
-
-            <div class="right-contents">
                 <div class="names flex-colomn">
-                    <span class="eng-name">Kangwon Park</span>
+                    <span class="oblique eng-name ">Kangwon Park</span>
                     <span class="kor-name">박강원</span>
                 </div>
                 <div class="introduce">
@@ -44,44 +35,57 @@
                     </span>
                 </div>
                 <div class="line"></div>
-
                 <div class="details flex-colomn">
                     <div class="detail-flex">
                         <span>생년월일</span>
-                        <span>2007.02.27 (18세)</span>
+                        <span class="oblique">2007.02.27 (18세)</span>
                     </div>
                     <div class="detail-flex">
                         <span>재학 중인 학교</span>
-                        <span>부산소프트웨어마이스터고등학교</span>
+                        <span class="oblique">부산소프트웨어마이스터고등학교</span>
                     </div>
                     <div class="detail-flex">
                         <span>메일</span>
-                        <span>nambaggangwon@gmail.com</span>
+                        <span class="oblique">nambaggangwon@gmail.com</span>
                     </div>
                     <div class="line"></div>
-                </div> 
-                <!-- <div class="links">
-                    <span>링크</span>
-                    <div>
-                        <img src="">
-                        <img src="">
-                        <img src="">
-                    </div>
-                </div> -->
+                </div>
+                <div class="links">
+                    <span class="link-text">링크</span>
+                    <div class="icon-flex">
+                        <a href="https://github.com/akns27" target="_blank">
+                            <img src="images/github_symbol.svg" class="icon">
+                        </a>
 
+                        <a href="https://www.instagram.com/imparkkangwon/" target="_blank">
+                            <img src="images/instagram_logo.svg" class="icon">
+                        </a>
+
+                        <a href="https://kangwonpark27.tistory.com/" target="_blank">
+                            <img src="images/티스토리 로고 1.svg" style="width: 40px; height: 40px;" class="icon">
+                        </a>
+                    </div>
+                </div>
             </div>
 
-
+            <div class="right-contents">
+                <div class="profile-image">
+                    <img src="images/시현하다.jpeg">
+                </div>
+                <div class="left-bottom">
+                    <a href="https://buly.kr/G3Acx6t" target="_blank"><button type="button" class="move-to-notion-btn">자세히 알아보기</button></a>
+                </div>
+            </div>
         </div>
     </div>
     <footer class="footer">
-        <img src="images/푸터최종수정2.svg" alt="footer">
+        <img src="images/푸터최종수정.svg" alt="footer">
     </footer>
     <div class="letter">
         <img src="images/편지.svg">
     </div>
     <div class="message">
-        <img src="images/메시지수정.svg">
+        <img src="images/메시지최종수정.svg">
     </div>
     <div class="modal-bg"></div>
 
@@ -98,17 +102,24 @@
             document.body.style.overflow = 'auto';
         });
 
-        document.querySelector('.name').addEventListener('click', function (event) {
+        document.querySelector('.name').addEventListener('click', function () {
             location.href = 'main.html';
         });
 
-        document.querySelector('#works').addEventListener('click', function (event) {
+        document.querySelector('#works').addEventListener('click', function () {
             location.href = 'works.html';
         });
 
-        // document.querySelector('#about-me').addEventListener('click', function (event) {
-        //     location.href = '';
-        // });
+        const aboutMeEle = document.getElementById('about-me');
+
+        aboutMeEle.onclick = () => {
+            const introduceEle = document.getElementById('introduce');
+            window.scrollTo({
+                top: introduce.offsetTop,
+                behavior: 'smooth'
+            });
+        };
+
 
     </script>
 </body>
